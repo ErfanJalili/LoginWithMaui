@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginWithMaui.MainPage"
+             BackgroundColor="#e7e7e7"
+             Title="LoginPage">
+
+    <Grid VerticalOptions="Center">
+
+
+        <Grid
+            RowDefinitions=".1*,.8*,.1*"
+            ColumnDefinitions=".2*,.6*,.2*"
+            VerticalOptions="Center">
+
+            <VerticalStackLayout
+                WidthRequest="50"
+                HeightRequest="50"
+                Grid.Column="1">
+                <Image Source="dotnet_bot.png" />
+            </VerticalStackLayout>
+
+
+            <VerticalStackLayout
+                Grid.Row="1"
+                Grid.Column="1">
+
+                <Frame 
+                    BorderColor="Black">
+
+                    <Grid 
+                        RowDefinitions="*,*,*,*"
+                        RowSpacing="10">
+                        <Label
+                            Grid.Row="0"
+                            Text="Login"
+                            TextColor="Black"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Center"
+                            FontSize="18"
+                            FontAttributes="Bold"/>
+
+                        <Border
+                            Grid.Row="1"
+                            Stroke="#e7e7e7"
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 0,0,0,0"
+                            Background="Transparent"
+                            Padding="18,9"
+                            >
+                            <Entry
+                                Grid.Row="1"
+                                x:Name="UsernameTxt"
+                                HeightRequest="50"
+                                FontSize="14"
+                                FontAttributes="Bold"
+                                HorizontalTextAlignment="Center"
+                                Placeholder="Enter your username ..."
+                                TextColor="Black"
+                                Keyboard="Telephone">
+                                
+                            </Entry>
+                        </Border>
+
+
+                        <Border
+                            Grid.Row="2"
+                            Stroke="#e7e7e7"
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 0,0,0,0"
+                            Background="Transparent"
+                            Padding="18,9"
+                            >
+                            <Entry
+                                Grid.Row="1"
+                                x:Name="PasswordTxt"
+                                HeightRequest="50"
+                                FontSize="14"
+                                FontAttributes="Bold"
+                                HorizontalTextAlignment="Center"
+                                Placeholder="Enter your pasword ..."
+                                TextColor="Black"
+                                IsPassword="True"
+                                Keyboard="Text">
+
+                            </Entry>
+                        </Border>
+
+                        <VerticalStackLayout
+                            Grid.Row="3">
+                            <Button
+                                x:Name="LoginBtn"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                                Text="Sign In"
+                                TextColor="White"
+                                Background="#2B0B98"></Button>
+                        </VerticalStackLayout>
+                        
+                    </Grid>
+                    
+                </Frame>
+                
+            </VerticalStackLayout>
+
+            <VerticalStackLayout 
+                Grid.Row="2"
+                Grid.Column="1">
+
+                <Button x:Name="SignUpBtn"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        Text="Sign Up"
+                        TextColor="#2B0B98"
+                        Background="#e7e7e7"/>
+                
+            </VerticalStackLayout>
+            
+        </Grid>
+        
+        
+    </Grid>
+   
+
+</ContentPage>
